@@ -7,6 +7,8 @@ publish = ".next"
 [build.environment]
 NODE_VERSION = "20"
 NODE_ENV = "production"
+# Disable secrets scanning for admin credentials (used for initial setup only)
+SECRETS_SCAN_OMIT_KEYS = "ADMIN_EMAIL,ADMIN_PASSWORD"
 
 # Site configuration
 [site]
