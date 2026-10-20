@@ -1,7 +1,5 @@
 [build]
 command = "npm ci && npm run build"
-functions = "netlify/functions"
-edge_functions = "src/middleware"
 publish = ".next"
 
 [build.environment]
@@ -10,17 +8,6 @@ NODE_ENV = "production"
 # Disable secrets scanning for admin credentials (used for initial setup only)
 SECRETS_SCAN_OMIT_KEYS = "ADMIN_EMAIL,ADMIN_PASSWORD"
 
-# Site configuration
-[site]
-functions = "netlify/functions"
-
-# Redirects for Next.js
-[[redirects]]
-from = "/:path*"
-to = "/.netlify/functions/index:path*"
-status = 200
-
-# Edge functions
-[[edge_functions]]
-path = "/*"
-function = "___netlify-edge-handler-src-middleware"
+# Enable Next.js support
+[[plugins]]
+package = "@netlify/plugin-nextjs"
