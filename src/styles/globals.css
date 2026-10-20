@@ -17,3 +17,10 @@ html,
 body {
   font-family: system-ui, -apple-system, sans-serif;
 }
+
+/* Hide Netlify badge */
+#netlify-badge,
+[id*="netlify"],
+a[href*="netlify.com"][target="_blank"] {
+  display: none !important;
+}
