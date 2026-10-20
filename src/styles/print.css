@@ -1,0 +1,235 @@
+@media print {
+  /* General print layout */
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Hide interactive elements that shouldn't print */
+  .no-print,
+  header,
+  footer,
+  nav,
+  button,
+  a[href]:after,
+  input,
+  select,
+  textarea {
+    display: none !important;
+  }
+
+  /* Show print-only content */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Page breaks and margins */
+  @page {
+    margin: 0.5in;
+    size: letter;
+  }
+
+  /* Main content area */
+  main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  /* Headers for pick/pack lists */
+  .print-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000;
+  }
+
+  .print-header h1,
+  .print-header h2 {
+    margin: 0;
+    font-size: 18pt;
+    font-weight: bold;
+  }
+
+  .print-header p {
+    margin: 0.25rem 0 0 0;
+    font-size: 11pt;
+    color: #333;
+  }
+
+  /* Pick/Pack list items */
+  .print-list {
+    margin-bottom: 1rem;
+  }
+
+  .print-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+
+  .print-list-item-name {
+    font-weight: 500;
+    font-size: 11pt;
+    flex: 1;
+  }
+
+  .print-list-item-quantity {
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: right;
+    min-width: 2rem;
+    margin-left: 1rem;
+  }
+
+  /* Tables for order details */
+  .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 10pt;
+  }
+
+  .print-table th,
+  .print-table td {
+    border: 1px solid #000;
+    padding: 0.3rem 0.5rem;
+    text-align: left;
+  }
+
+  .print-table th {
+    background-color: #e8e8e8;
+    font-weight: bold;
+    font-size: 11pt;
+  }
+
+  .print-table tr {
+    page-break-inside: avoid;
+  }
+
+  /* Order cards */
+  .print-order-card {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    border: 1px solid #000;
+    page-break-inside: avoid;
+  }
+
+  .print-order-card-header {
+    font-weight: bold;
+    font-size: 11pt;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #333;
+  }
+
+  .print-order-card-details {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  /* Section separators */
+  .print-section {
+    margin: 2rem 0;
+    page-break-inside: avoid;
+  }
+
+  .print-section-title {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000;
+  }
+
+  /* Stats/summary boxes */
+  .print-stat {
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .print-stat-label {
+    font-size: 10pt;
+    font-weight: 500;
+    color: #666;
+  }
+
+  .print-stat-value {
+    font-size: 16pt;
+    font-weight: bold;
+  }
+
+  /* Spacing utilities */
+  .print-spacing-lg {
+    margin-bottom: 1.5rem;
+  }
+
+  .print-spacing-md {
+    margin-bottom: 1rem;
+  }
+
+  .print-spacing-sm {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Text utilities */
+  .print-bold {
+    font-weight: bold;
+  }
+
+  .print-center {
+    text-align: center;
+  }
+
+  .print-right {
+    text-align: right;
+  }
+
+  /* Remove rounded corners and shadows */
+  .rounded,
+  .rounded-lg,
+  .shadow,
+  .shadow-sm {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure proper sizing */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Remove background colors and keep text readable */
+  .bg-neutral-off-white,
+  .bg-white,
+  .bg-gray-50,
+  .bg-gray-100 {
+    background-color: white !important;
+  }
+
+  /* Print background for important content */
+  .print-bg-light {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Screen-only styles (hide in print) */
+@media screen {
+  .print-only {
+    display: none;
+  }
+}

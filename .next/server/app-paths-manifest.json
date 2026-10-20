@@ -1,0 +1,11 @@
+{
+  "/api/agent/order/[id]/items/route": "app/api/agent/order/[id]/items/route.js",
+  "/api/agent/batch/[id]/route": "app/api/agent/batch/[id]/route.js",
+  "/api/agent/order/[id]/delivered/route": "app/api/agent/order/[id]/delivered/route.js",
+  "/api/agent/orders/unclaimed-count/route": "app/api/agent/orders/unclaimed-count/route.js",
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(agent)/agent/page": "app/(agent)/agent/page.js",
+  "/(agent)/agent/batch/[id]/page": "app/(agent)/agent/batch/[id]/page.js",
+  "/(agent)/agent/batch/[id]/order/[orderId]/page": "app/(agent)/agent/batch/[id]/order/[orderId]/page.js",
+  "/(agent)/agent/order/[id]/deliver/page": "app/(agent)/agent/order/[id]/deliver/page.js"
+}
