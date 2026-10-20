@@ -1,0 +1,24 @@
+[build]
+command = "npm run build"
+functions = "netlify/functions"
+edge_functions = "src/middleware"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "20"
+NODE_ENV = "production"
+
+# Site configuration
+[site]
+functions = "netlify/functions"
+
+# Redirects for Next.js
+[[redirects]]
+from = "/:path*"
+to = "/.netlify/functions/index:path*"
+status = 200
+
+# Edge functions
+[[edge_functions]]
+path = "/*"
+function = "___netlify-edge-handler-src-middleware"
